@@ -2,7 +2,7 @@
 title: Mythology and the Tolerance of the Javanese
 date: 2026-06-01
 excerpt: Catatan baca monograf Ben Anderson tentang bagaimana wayang membentuk standar moral Jawa — bukan baik vs jahat, melainkan halus vs kasar.
-image: /images/image2.png
+image: /images/mythology-javanese-anderson.png
 tags: [buku, budaya Jawa, wayang, antropologi, Ben Anderson]
 ---
 # Mythology and the Tolerance of the Javanese
