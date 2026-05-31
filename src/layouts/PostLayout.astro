@@ -4,19 +4,21 @@ import PostNavigation from '../components/PostNavigation.astro';
 import { formatDate } from '../utils/date';
 import { optimizeImagePath } from '../utils/optimizeImagePath';
 
-const { frontmatter, headings, prevPost, nextPost } = Astro.props;
+const { frontmatter, headings, prevPost, nextPost, entry } = Astro.props;
 const { title, date, tags, image, excerpt } = frontmatter;
 const slug = Astro.url.pathname.split('/').filter(Boolean).pop();
 
 // Ensure image path is optimized
 const optimizedImagePath = image ? optimizeImagePath(image) : null;
 
-// Estimated reading time
+// Estimated reading time using raw body if available, otherwise fallback
 const WORDS_PER_MINUTE = 225;
-const content = await Astro.slots.render('default');
-const contentText = content.replace(/<\/?[^>]+(>|$)/g, ' ');
-const wordCount = contentText.split(/\s+/).length;
-const readingTime = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
+const readingTime = (() => {
+  const body = entry?.body;
+  if (!body) return 1;
+  const wordCount = body.split(/\s+/).length;
+  return Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
+})();
 
 // Structured data for SEO
 const publishDate = new Date(date);

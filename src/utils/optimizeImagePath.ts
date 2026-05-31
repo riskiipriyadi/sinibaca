@@ -13,7 +13,15 @@ export function optimizeImagePath(path: string): string {
 
   // Make sure the path is valid
   if (!path) return '';
-  
+
+  // Prepend base URL for absolute public paths so they work under a subpath deployment
+  if (path.startsWith('/')) {
+    const base = import.meta.env.BASE_URL || '';
+    if (base && base !== '/') {
+      return `${base.replace(/\/$/, '')}${path}`;
+    }
+  }
+
   // Astro will optimize images referenced in HTML, so we just return the path
   return path;
 }
