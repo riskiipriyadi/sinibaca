@@ -46,3 +46,6 @@ Implikasi politiknya: kekuasaan tidak pernah dituntut untuk bermoral secara subs
 
 Anderson, B. R. O'G. (2009). *Mythology and the Tolerance of the Javanese*. Jakarta: Equinox Publishing. (Terbit pertama 1965).
 
+*Ilustrasi dibuat dengan ChatGPT Image Generation (DALL-E)*
+
+
