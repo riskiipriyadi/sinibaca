@@ -3,42 +3,34 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  # Build Jekyll site
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v4
         with:
-          ruby-version: '3.3' # Chirpy theme works with Ruby 3.x
+          fetch-depth: 0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
           bundler-cache: true
-      - name: Install dependencies
-        run: bundle install
-      - name: Build Jekyll site
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
+      - uses: actions/configure-pages@v5
+      - run: bundle exec jekyll build --baseurl "/sinibaca"
+        env:
+          JEKYLL_ENV: production
+      - uses: actions/upload-pages-artifact@v3
 
-  # Deploy to GitHub Pages
   deploy:
     environment:
       name: github-pages
@@ -46,6 +38,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
