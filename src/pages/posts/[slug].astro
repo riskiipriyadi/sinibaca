@@ -15,14 +15,14 @@ export async function getStaticPaths() {
     // Bestimme vorherigen und nächsten Post
     const prevPost = sortedPosts[index - 1]
       ? {
-          url: `/posts/${sortedPosts[index - 1].id}`,
+          url: `${import.meta.env.BASE_URL}/posts/${sortedPosts[index - 1].id}`,
           title: sortedPosts[index - 1].data.title
         }
       : null;
 
     const nextPost = sortedPosts[index + 1]
       ? {
-          url: `/posts/${sortedPosts[index + 1].id}`,
+          url: `${import.meta.env.BASE_URL}/posts/${sortedPosts[index + 1].id}`,
           title: sortedPosts[index + 1].data.title
         }
       : null;

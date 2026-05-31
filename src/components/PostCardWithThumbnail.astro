@@ -64,7 +64,7 @@ const optimizedImagePath = image ? optimizeImagePath(image) : null;
         <div class="flex flex-wrap gap-2 mb-2" aria-label="Tags">
           {tags.map((tag) => (
             <a
-              href={`/tags/${tag}`}
+              href={`${import.meta.env.BASE_URL}/tags/${tag}`}
               class="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               aria-label={`View all posts tagged ${tag}`}
             >
@@ -94,12 +94,12 @@ const optimizedImagePath = image ? optimizeImagePath(image) : null;
 
 <style>
   /* Styles for tags */
-  article a[href^="/tags/"] {
+  article a[href*="/tags/"] {
     background-color: #f3f4f6;
     color: #333;
   }
   
-  article a[href^="/tags/"]:hover {
+  article a[href*="/tags/"]:hover {
     background-color: #e5e7eb;
   }
 </style>
