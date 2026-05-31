@@ -3,12 +3,11 @@ layout: post
 title: "Mythology and the Tolerance of the Javanese"
 date: 2026-06-01 00:00:00 +0700
 categories: [tulisan]
+author: riskiipriyadi
 image:
-  path: /assets/img/posts/mythology-javanese-anderson.png
+  path: /sinibaca/assets/img/posts/mythology-javanese-anderson.png
+  alt: "Ilustrasi dibuat dengan ChatGPT Image Generation (DALL-E)"
 ---
-
-![Ilustrasi](../assets/img/posts/mythology-javanese-anderson.png)
-*Ilustrasi dibuat dengan ChatGPT Image Generation (DALL-E)*
 
 **Benedict R. O'G. Anderson** | 1965
 
