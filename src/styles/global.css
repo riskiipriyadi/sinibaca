@@ -67,11 +67,11 @@
   
   /* Feature image */
   .feature-image {
-    @apply aspect-video rounded-lg overflow-hidden;
+    @apply rounded-lg overflow-hidden;
   }
-  
+
   .feature-image img {
-    @apply w-full h-full object-cover;
+    @apply w-full h-auto object-contain;
   }
   
   /* Content container */
