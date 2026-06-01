@@ -21,17 +21,10 @@ script_includes:
     {% endif %}
 
     <!-- posted / updated dates -->
-    <div class="post-meta text-muted d-flex flex-row align-items-center flex-wrap">
-      <span class="me-2">
-        {{ site.data.locales[lang].post.posted }}
-        {% include datetime.html date=page.date tooltip=true lang=lang %}
-      </span>
+    <div class="post-meta text-muted">
+      <span>Posted {% include datetime.html date=page.date tooltip=true lang=lang %}</span>
       {% if page.last_modified_at and page.last_modified_at != page.date %}
-        <span class="me-2">&middot;</span>
-        <span class="me-2">
-          {{ site.data.locales[lang].post.updated }}
-          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
-        </span>
+        <span>&middot; Updated {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}</span>
       {% endif %}
     </div>
 
@@ -55,8 +48,8 @@ script_includes:
     <!-- author / year / read time -->
     <div class="post-meta text-muted">
       <span>By {% if page.author %}{{ page.author }}{% else %}<a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>{% endif %}</span>
-      <span> &middot; {{ page.date | date: "%Y" }}</span>
-      <span> &middot; {% include read-time.html content=content prompt=true lang=lang %}</span>
+      <span>&middot; {{ page.date | date: "%Y" }}</span>
+      <span>&middot; {% include read-time.html content=content prompt=true lang=lang %}</span>
     </div>
   </header>
 
