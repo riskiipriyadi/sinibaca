@@ -155,6 +155,9 @@ pwa:
 
 paginate: 10
 
+# Excerpt length for post cards on the home page (in characters)
+excerpt_length: 350
+
 # The base URL of your site
 baseurl: "/sinibaca"
 
