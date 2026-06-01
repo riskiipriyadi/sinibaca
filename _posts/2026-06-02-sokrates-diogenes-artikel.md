@@ -13,7 +13,7 @@ Tahun 399 SM. Sokrates berdiri di hadapan 500 juri Athena. Jaksa meminta hukuman
 
 Lebih dari dua abad kemudian, Alexander Agung penguasa separuh dunia yang dikenal berdiri di depan seorang pria tua yang sedang berjemur di jalanan Korinthos. Alexander menawarkan apa pun yang dia inginkan. Pria itu menjawab: "Menyingkirlah dari depan matahariKu."
 
-Dua orang. Dua cara hidup yang berbeda radikal. Satu prinsip yang sama: hidup mereka tidak bisa dibeli, diancam, atau diarahkan oleh ekspektasi orang lain, karena mereka sudah memutuskan lebih dulu apa yang benar-benar bernilai.
+Dua orang. Dua cara hidup yang berbeda radikal. Namun satu prinsip yang sama: hidup mereka tidak bisa dibeli, diancam, atau diarahkan oleh ekspektasi orang lain, karena mereka sudah memutuskan lebih dulu apa yang benar-benar bernilai.
 
 ---
 
