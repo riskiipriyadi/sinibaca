@@ -9,6 +9,10 @@ image:
   alt: "Ilustrasi dibuat dengan ChatGPT Image Generation (DALL-E)"
 ---
 
+Esai Benedict R. O'G. Anderson (1965) ini menelusuri bagaimana mitologi Jawa — khususnya melalui tradisi wayang — membentuk sistem nilai dan toleransi moral masyarakat Jawa. Anderson berargumen bahwa untuk memahami Jawa kontemporer, kita harus lebih dulu memahami warisan budaya pra-Barat yang masih hidup.
+
+<!--more-->
+
 ## Argumen Utama
 
 Anderson berargumen bahwa untuk memahami masyarakat Jawa kontemporer secara mendalam, seseorang harus terlebih dahulu memahami warisan budaya pra-Barat yang masih hidup. Medium terbaik untuk itu adalah **wayang**.
