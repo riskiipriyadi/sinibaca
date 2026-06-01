@@ -18,12 +18,12 @@ tabs:
 
 # the text displayed in the search bar & search results
 search:
-  hint: search
+  hint: Cari
   cancel: Cancel
   no_results: Oops! No results found.
 
 panel:
-  lastmod: Recently Updated
+  lastmod: Baru Diperbarui
   trending_tags: Trending Tags
   toc: Contents
 
