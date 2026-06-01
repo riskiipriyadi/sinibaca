@@ -1,12 +1,12 @@
 <!-- published date -->
-<span>
+<span class="post-meta-published">
   {{ site.data.locales[lang].post.posted }}
   {% include datetime.html date=page.date tooltip=true lang=lang %}
 </span>
 
 <!-- lastmod date -->
 {% if page.last_modified_at and page.last_modified_at != page.date %}
-<span>
+<span class="post-meta-updated">
   {{ site.data.locales[lang].post.updated }}
   {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
 </span>
@@ -29,7 +29,7 @@
 </div>
 {% endif %}
 
-<div class="post-meta-info d-flex flex-wrap align-items-center gap-2 flex-md-nowrap">
+<div class="post-meta-line">
   <!-- author(s) -->
   {% if page.author or page.authors %}
     {% if page.author %}
@@ -38,7 +38,7 @@
       {% assign authors = page.authors %}
     {% endif %}
     
-    <span class="post-author">
+    <span class="post-meta-author">
       {{ site.data.locales[lang].post.written_by }}
       <em>
         {% if authors %}
@@ -59,14 +59,12 @@
   
   <!-- date separator -->
   {% if page.author or page.authors %}
-    <span class="post-date">
-      · {{ page.date | date: "%Y" }}
-    </span>
+    <span class="post-meta-year">· {{ page.date | date: "%Y" }}</span>
   {% endif %}
   
   <!-- pageviews -->
   {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
-  <span class="post-pageviews">
+  <span class="post-meta-pageviews">
     <em id="pageviews">
       <i class="fas fa-spinner fa-spin small"></i>
     </em>
@@ -75,7 +73,7 @@
   {% endif %}
   
   <!-- read time -->
-  <span class="post-read-time">
+  <span class="post-meta-readtime">
     {% include read-time.html content=content prompt=true lang=lang %}
   </span>
 </div>

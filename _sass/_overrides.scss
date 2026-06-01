@@ -1,0 +1,102 @@
+---
+---
+
+/*
+ * Post meta overrides
+ * Fix the broken author metadata display in posts
+ */
+
+/* Override the .post-meta container to display as a single inline line */
+.post-meta {
+  display: block !important;
+  font-size: 0.875rem;
+  color: var(--text-muted-color, #6c757d);
+}
+
+/* Style the post-meta-line container to display children inline */
+.post-meta-line {
+  display: block !important;
+  flex: none !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 0 !important;
+  flex-wrap: nowrap !important;
+  margin-top: 0.5rem;
+}
+
+/* Make all child elements display inline */
+.post-meta-line > span {
+  display: inline !important;
+  margin-right: 0.25rem;
+  white-space: nowrap;
+}
+
+/* Remove any flex/table styling from author elements */
+.post-meta-author,
+.post-meta-year,
+.post-meta-pageviews,
+.post-meta-readtime {
+  display: inline !important;
+  float: none !important;
+  width: auto !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 0.25rem 0 0 !important;
+}
+
+/* Ensure the em tag inside author doesn't break inline flow */
+.post-meta-author em {
+  font-style: italic;
+  display: inline !important;
+}
+
+/* Style the date spans to be inline */
+.post-meta-published,
+.post-meta-updated {
+  display: inline !important;
+  margin-right: 0.5rem;
+}
+
+/* Ensure the image preview remains block-level */
+.post-meta + div,
+.mt-3.mb-3 {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Remove the bordered table/box appearance */
+.post-meta-info,
+.post-meta-line {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Ensure proper spacing between inline elements */
+.post-meta-year::before {
+  content: " ";
+  margin: 0 0.25rem;
+}
+
+.post-meta-pageviews,
+.post-meta-readtime {
+  margin-left: 0.5rem !important;
+}
+
+/* Make the pageviews and read time appear on the same line */
+#pageviews {
+  font-style: normal;
+}
+
+/* Override any flex display that might be applied */
+.post-meta-line[style*="display"] {
+  display: block !important;
+}
+
+/* Ensure the read-time span is inline */
+.readtime {
+  display: inline !important;
+}
