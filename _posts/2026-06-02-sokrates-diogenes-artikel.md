@@ -2,6 +2,8 @@
 title: "Orang-orang yang Hidupnya Tidak Bisa Dikontrol karena Mereka Sudah Tahu Apa yang Benar-benar Penting"
 date: 2026-06-02
 image: /assets/img/posts/sokrates-diogenes.png
+categories: [Filsafat]
+tags: [sokrates, diogenes, stoisisme]
 ---
 # Orang-orang yang Hidupnya Tidak Bisa Dikontrol karena Mereka Sudah Tahu Apa yang Benar-benar Penting
 
@@ -59,7 +61,7 @@ Plato menyebutnya *"Sokrates yang gila"* (*Socrates mainomenos*). Ini bukan hina
 
 Dia tidur di dalam *pithos* (jar besar dari tanah liat untuk menyimpan makanan, bukan tong kayu seperti yang sering digambarkan). Dia memakai satu jubah yang dilipat dua agar hangat di musim dingin dan sejuk di musim panas. Dia mengemis untuk makan. Dia melempar cangkir kayunya ke sungai setelah melihat seorang anak minum dari telapak tangan, menyadari alam sudah memberinya semua yang dia butuhkan.
 
-Perilakunya sengaja provokatif: makan di pasar (yang dianggap tidak sopan), melakukan aktivitas seksual di depan umum, kencing di depan orang yang menghinanya. Tujuannya bukan shock value; dia sedang membuktikan sebuah argumen: apa yang dianggap memalukan oleh konvensi sosial tidak otomatis memalukan secara *alamiah*.
+Perilakunya sengaja provokatif: makan di pasar (yang dianggap tidak sopan), kencing di depan orang yang menghinanya. Tujuannya bukan shock value; dia sedang membuktikan sebuah argumen: apa yang dianggap memalukan oleh konvensi sosial tidak otomatis memalukan secara *alamiah*.
 
 ### Anekdot-Anekdot Kunci
 
