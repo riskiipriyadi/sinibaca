@@ -23,7 +23,7 @@ Dua orang. Dua cara hidup yang berbeda radikal. Namun satu prinsip yang sama: hi
 
 Sokrates diadili pada 399 SM atas dua tuduhan: *asebeia* (penistaan agama yang mencakup penolakan terhadap dewa-dewa resmi negara kota Athena), khususnya "tidak mengakui dewa-dewa yang diakui kota dan memperkenalkan dewa-dewa baru" dan merusak moral pemuda Athena. Penuntut utama adalah Meletus, yang mewakili kalangan penyair; Anytus, seorang politikus dari keluarga pengrajin kulit; dan Lycon, yang mewakili retorikawan.
 
-Di balik tuduhan formal itu ada konteks yang lebih dalam. Dua murid dekat Sokrates, Alcibiades dan Critias pernah memimpin kudeta antidemokratis yang menewaskan sekitar lima persen warga Athena. Amnesti tahun 403 SM mencegah dakwaan langsung atas koneksi ini, tapi memori publik tidak bisa diamputasi secara hukum. Sokrates juga dikenal terang-terangan meremehkan sistem demokrasi Athena: dia percaya kepemimpinan harus berdasar *pengetahuan*, bukan suara mayoritas.
+Di balik tuduhan formal itu ada konteks yang lebih dalam. Dua murid dekat Sokrates, Alcibiades dan Critias pernah memimpin kudeta antidemokratis yang menewaskan sekitar lima persen warga Athena. Namun amnesti tahun 403 SM mencegah dakwaan langsung atas hubungan Sokrates dengan Alcibiades dan Critias, tapi memori publik tidak bisa diamputasi secara hukum. Sokrates juga dikenal terang-terangan meremehkan sistem demokrasi Athena: dia percaya kepemimpinan harus berdasar *pengetahuan*, bukan suara mayoritas.
 
 ### Cara Membela Diri
 
