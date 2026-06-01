@@ -65,8 +65,8 @@ post:
   relate_posts: Further Reading
   share: Share
   button:
-    next: Newer
-    previous: Older
+    next: LEBIH BARU
+    previous: LEBIH LAMA
     copy_code:
       succeed: Copied!
     share_link:
