@@ -1,0 +1,24 @@
+/*
+ * Post cover image full-bleed override
+ *
+ * The chirpy theme constrains post content to a centred column
+ * (col-12 col-lg-11 col-xl-9 in the default layout). The cover
+ * image wrapper sits inside that column, so by default it can
+ * never exceed the column width even with .w-100 on the <img>.
+ *
+ * Break the wrapper out of the column to span the full viewport
+ * width. The .post-cover-breakout class is applied to the wrapper
+ * <div> around <img>; the image itself is sized to 100% of the
+ * breakout wrapper.
+ */
+.post-cover-breakout {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.post-cover-breakout img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
