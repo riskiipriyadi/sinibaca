@@ -38,7 +38,7 @@ script_includes:
       {% endif %}
 
       <div class="mt-3 mb-3">
-        <img {{ src }} {{ class }} {{ alt }} {{ lqip }}>
+        <img style="width: 100%" {{ src }} {{ class }} {{ alt }} {{ lqip }}>
         {%- if page.image.alt -%}
           <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
         {%- endif -%}
