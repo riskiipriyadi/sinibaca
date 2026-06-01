@@ -11,7 +11,7 @@ tags: [sokrates, diogenes, stoisisme]
 
 Tahun 399 SM. Sokrates berdiri di hadapan 500 juri Athena. Jaksa meminta hukuman mati. Tawaran tak terucap tapi jelas tersedia: minta maaf, bersikap rendah hati, dan kemungkinan besar dia akan dibebaskan. Sokrates menolak. Bukan karena tidak tahu risikonya, tapi karena dia sudah lama berhenti peduli pada hal-hal yang biasanya membuat orang takut.
 
-Lebih dari dua abad kemudian, Alexander Agung penguasa separuh dunia yang dikenal berdiri di depan seorang pria tua yang sedang berjemur di jalanan Korinthos. Alexander menawarkan apa pun yang dia inginkan. Pria itu menjawab: "Menyingkirlah dari depan mataharimu."
+Lebih dari dua abad kemudian, Alexander Agung penguasa separuh dunia yang dikenal berdiri di depan seorang pria tua yang sedang berjemur di jalanan Korinthos. Alexander menawarkan apa pun yang dia inginkan. Pria itu menjawab: "Menyingkirlah dari depan matahariKu."
 
 Dua orang. Dua cara hidup yang berbeda radikal. Satu prinsip yang sama: hidup mereka tidak bisa dibeli, diancam, atau diarahkan oleh ekspektasi orang lain, karena mereka sudah memutuskan lebih dulu apa yang benar-benar bernilai.
 
@@ -67,7 +67,7 @@ Perilakunya sengaja provokatif: makan di pasar (yang dianggap tidak sopan), kenc
 
 **Lantern di siang hari.** Diogenes berjalan di pasar Athena di bawah terik matahari sambil membawa lampu menyala. Ketika ditanya kenapa, dia menjawab: *"Aku mencari manusia."* Maksudnya: aku mencari individu sejati, orang yang berpikir sendiri, bukan sekadar mengikuti arus kerumunan.
 
-**Pertemuan dengan Alexander.** Alexander Agung datang menemui Diogenes yang sedang berjemur, menawarkan apa pun yang dia mau. Diogenes: *"Menyingkirlah dari sinar mataharimu."* Alexander terpesona hingga berkata kepada pengikutnya: *"Seandainya aku bukan Alexander, aku ingin menjadi Diogenes."* Versi lain dari pertemuan ini juga dicatat: ketika Alexander memperkenalkan diri sebagai "Alexander, Raja Agung", Diogenes menjawab: "Dan aku Diogenes, si Anjing." Dua orang yang masing-masing hidup di puncak kemungkinan mereka; satu dengan kekuasaan, satu tanpa kebutuhan akan kekuasaan.
+**Pertemuan dengan Alexander.** Alexander Agung datang menemui Diogenes yang sedang berjemur, menawarkan apa pun yang dia mau. Diogenes: *"Menyingkirlah dari sinar matahariKu."* Alexander terpesona hingga berkata kepada pengikutnya: *"Seandainya aku bukan Alexander, aku ingin menjadi Diogenes."* Versi lain dari pertemuan ini juga dicatat: ketika Alexander memperkenalkan diri sebagai "Alexander, Raja Agung", Diogenes menjawab: "Dan aku Diogenes, si Anjing." Dua orang yang masing-masing hidup di puncak kemungkinan mereka; satu dengan kekuasaan, satu tanpa kebutuhan akan kekuasaan.
 
 **Pertemuan dengan Plato.** Plato mendefinisikan manusia sebagai "binatang berkaki dua tanpa bulu." Diogenes mencabut bulu seekor ayam, membawanya ke akademi Plato, dan berkata: *"Inilah manusia versi Plato."* Plato kemudian menambahkan klausa pada definisinya: "dengan kuku pipih dan lebar." Ini bukan sekadar lelucon; ini kritik epistemologis: definisi abstrak yang tidak bisa diuji oleh kenyataan adalah bangunan tanpa fondasi.
 
