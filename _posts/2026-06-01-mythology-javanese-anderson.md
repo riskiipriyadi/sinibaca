@@ -2,7 +2,7 @@
 layout: post
 title: "Mythology and the Tolerance of the Javanese"
 date: 2026-06-01 00:00:00 +0700
-categories: [tulisan]
+categories: [sosial]
 author: riskipriyadi
 image:
   path: /assets/img/posts/mythology-javanese-anderson.png
