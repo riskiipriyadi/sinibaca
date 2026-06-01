@@ -2,3 +2,11 @@
   aspect-ratio: auto;
   height: auto;
 }
+
+#post-list .card-body {
+  height: auto;
+}
+
+#post-list .card-body .post-meta {
+  flex-grow: 0 !important;
+}
