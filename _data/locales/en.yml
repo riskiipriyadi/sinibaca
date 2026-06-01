@@ -63,7 +63,7 @@ post:
     prompt: read
   edit: Edit this post
   relate_posts: Further Reading
-  share: "Bagikan:"
+  share: "Bagikan"
   button:
     next: LEBIH BARU
     previous: LEBIH LAMA
