@@ -5,7 +5,7 @@ date: 2026-06-01 00:00:00 +0700
 categories: [Sosial]
 author: riskipriyadi
 image:
-  path: /assets/img/posts/mythology-javanese-anderson.png
+  path: /assets/img/posts/mythology-javanese-cover.png
   alt: "Ilustrasi dibuat dengan ChatGPT Image Generation (DALL-E)"
 ---
 
