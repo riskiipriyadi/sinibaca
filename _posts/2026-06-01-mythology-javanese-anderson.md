@@ -9,10 +9,6 @@ image:
   alt: "Ilustrasi dibuat dengan ChatGPT Image Generation (DALL-E)"
 ---
 
-**Benedict R. O'G. Anderson** | 1965
-
----
-
 ## Argumen Utama
 
 Anderson berargumen bahwa untuk memahami masyarakat Jawa kontemporer secara mendalam, seseorang harus terlebih dahulu memahami warisan budaya pra-Barat yang masih hidup. Medium terbaik untuk itu adalah **wayang**.

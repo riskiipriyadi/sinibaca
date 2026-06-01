@@ -39,7 +39,7 @@ script_includes:
 
     <div class="post-meta text-muted d-flex flex-row align-items-center flex-wrap">
       {% if page.author %}
-        {% assign authors = page.author %}
+        {% assign authors = page.author | split: ',' %}
       {% elsif page.authors %}
         {% assign authors = page.authors %}
       {% endif %}
@@ -49,10 +49,13 @@ script_includes:
         <em>
           {% if authors %}
             {% for author in authors %}
-              {% if site.data.authors[author].url -%}
-                <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+              {% assign author_data = site.data.authors[author] %}
+              {% if author_data.url -%}
+                <a href="{{ author_data.url }}">{{ author_data.name }}</a>
+              {%- elsif author_data -%}
+                {{ author_data.name }}
               {%- else -%}
-                {{ site.data.authors[author].name }}
+                {{ author }}
               {%- endif %}
               {% unless forloop.last %}, {% endunless %}
             {% endfor %}
