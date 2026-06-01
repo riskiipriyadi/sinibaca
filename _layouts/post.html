@@ -53,19 +53,10 @@ script_includes:
     {% endif %}
 
     <!-- author / year / read time -->
-    <div class="post-meta text-muted d-flex flex-row align-items-center flex-wrap">
-      <span class="me-2">
-        {{ site.data.locales[lang].post.written_by }}
-        {%- if page.author -%}
-          {{ page.author }}
-        {%- else -%}
-          <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-        {%- endif -%}
-      </span>
-      <span class="me-2">&middot;</span>
-      <span class="me-2">{{ page.date | date: "%Y" }}</span>
-      <span class="me-2">&middot;</span>
-      {% include read-time.html content=content prompt=true lang=lang %}
+    <div class="post-meta text-muted">
+      <span>By {% if page.author %}{{ page.author }}{% else %}<a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>{% endif %}</span>
+      <span> &middot; {{ page.date | date: "%Y" }}</span>
+      <span> &middot; {% include read-time.html content=content prompt=true lang=lang %}</span>
     </div>
   </header>
 
