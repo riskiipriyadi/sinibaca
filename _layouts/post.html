@@ -20,6 +20,21 @@ script_includes:
       <p class="post-desc fw-light mb-4">{{ page.description }}</p>
     {% endif %}
 
+    <!-- posted / updated dates -->
+    <div class="post-meta text-muted d-flex flex-row align-items-center flex-wrap">
+      <span class="me-2">
+        {{ site.data.locales[lang].post.posted }}
+        {% include datetime.html date=page.date tooltip=true lang=lang %}
+      </span>
+      {% if page.last_modified_at and page.last_modified_at != page.date %}
+        <span class="me-2">&middot;</span>
+        <span class="me-2">
+          {{ site.data.locales[lang].post.updated }}
+          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+        </span>
+      {% endif %}
+    </div>
+
     {% if page.image %}
       {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
       {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
@@ -37,34 +52,16 @@ script_includes:
       </div>
     {% endif %}
 
+    <!-- author / year / read time -->
     <div class="post-meta text-muted d-flex flex-row align-items-center flex-wrap">
-      {% if page.author %}
-        {% assign authors = page.author | split: ',' %}
-      {% elsif page.authors %}
-        {% assign authors = page.authors %}
-      {% endif %}
-
       <span class="me-2">
         {{ site.data.locales[lang].post.written_by }}
-        <em>
-          {% if authors %}
-            {% for author in authors %}
-              {% assign author_data = site.data.authors[author] %}
-              {% if author_data.url -%}
-                <a href="{{ author_data.url }}">{{ author_data.name }}</a>
-              {%- elsif author_data -%}
-                {{ author_data.name }}
-              {%- else -%}
-                {{ author }}
-              {%- endif %}
-              {% unless forloop.last %}, {% endunless %}
-            {% endfor %}
-          {% else %}
-            <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-          {% endif %}
-        </em>
+        {%- if page.author -%}
+          {{ page.author }}
+        {%- else -%}
+          <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+        {%- endif -%}
       </span>
-
       <span class="me-2">&middot;</span>
       <span class="me-2">{{ page.date | date: "%Y" }}</span>
       <span class="me-2">&middot;</span>
