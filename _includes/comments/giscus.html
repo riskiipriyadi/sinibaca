@@ -1,7 +1,13 @@
-<!-- https://giscus.app/ -->
+{%- if site.comments.giscus.repo and site.comments.giscus.repo_id and site.comments.giscus.category_id -%}
+<div id="giscus_thread"></div>
 <script>
-  (function () {
-    const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
+  window._giscusThemeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
+
+  function loadGiscus() {
+    const existing = document.querySelector('#giscus_thread script[src*="giscus"]');
+    if (existing) return;
+
+    const themeMapper = window._giscusThemeMapper;
     const initTheme = themeMapper[Theme.visualState];
 
     let lang = '{{ site.comments.giscus.lang | default: lang }}';
@@ -33,32 +39,37 @@
       giscusNode.setAttribute(key, value)
     );
 
-    const $footer = document.querySelector('footer');
-    $footer.insertAdjacentElement("beforebegin", giscusNode);
+    document.getElementById('giscus_thread').appendChild(giscusNode);
+  }
 
-    addEventListener('message', (event) => {
-      if (event.source === window && event.data && event.data.id === Theme.ID) {
-        const newTheme = themeMapper[Theme.visualState];
-        const message = {
-          setConfig: {
-            theme: newTheme
-          }
-        };
-
-        const iframe = document.querySelector('.giscus-frame');
-
-        if (!iframe) {
-          return;
+  addEventListener('message', (event) => {
+    if (event.source === window && event.data && event.data.id === Theme.ID) {
+      const themeMapper = window._giscusThemeMapper;
+      const newTheme = themeMapper[Theme.visualState];
+      const message = {
+        setConfig: {
+          theme: newTheme
         }
+      };
 
-        if (iframe.classList.contains('giscus-frame--loading')) {
-          let url = new URL(iframe.src);
-          url.searchParams.set('theme', newTheme);
-          iframe.src = url.toString();
-        }
+      const iframe = document.querySelector('.giscus-frame');
 
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      if (!iframe) {
+        return;
       }
-    });
-  })();
+
+      if (iframe.classList.contains('giscus-frame--loading')) {
+        let url = new URL(iframe.src);
+        url.searchParams.set('theme', newTheme);
+        iframe.src = url.toString();
+      }
+
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+  });
+
+  if (document.querySelector('#comment-switch-giscus.active')) {
+    loadGiscus();
+  }
 </script>
+{%- endif -%}
