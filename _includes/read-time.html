@@ -1,0 +1,17 @@
+{% comment %}
+  Calculate the post's reading time and display localized label.
+{% endcomment %}
+
+{% assign words = include.content | strip_html | number_of_words: 'auto' %}
+
+{% assign wpm = 180 %}
+{% assign min_time = 1 %}
+
+{% assign read_time = words | divided_by: wpm %}
+{% unless read_time > 0 %}
+  {% assign read_time = min_time %}
+{% endunless %}
+
+<span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ words }} {{ site.data.locales[include.lang].post.words }}">
+  {{ site.data.locales[include.lang].post.read_time.prompt }} {{ read_time }} {{ site.data.locales[include.lang].post.read_time.unit }}
+</span>
