@@ -107,3 +107,7 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 #toc-wrapper.invisible { visibility: hidden !important; height: 0 !important; margin: 0 !important; overflow: hidden !important; }
 #toc-wrapper.invisible::before { display: none !important; }
 .toc-border-cover { display: none !important; }
+
+#toc-wrapper.invisible {
+  display: none !important;
+}
