@@ -85,6 +85,7 @@
 
 /* Warm theme overrides */
 [data-mode='warm'] {
+  --main-bg: #FBF0D9;
   --body-bg: #FBF0D9;
   --text-color: #5F4B32;
   --sidebar-bg: #F2E4C4;
