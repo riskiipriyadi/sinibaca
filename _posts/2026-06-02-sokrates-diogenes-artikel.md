@@ -1,7 +1,7 @@
 ---
 title: "Orang-orang yang Hidupnya Tidak Bisa Dikontrol karena Mereka Sudah Tahu Apa yang Benar-benar Penting"
 date: 2026-06-02
-image: /assets/img/posts/sokrates-diogenes.png
+image: assets/img/sokrates-diogenes-thumbnail.png
 categories: [Filsafat]
 tags: [sokrates, diogenes, stoisisme]
 ---
