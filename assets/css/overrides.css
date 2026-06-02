@@ -111,3 +111,5 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 #toc-wrapper::after { display: none !important; }
 
 #toc-wrapper { margin-top: 0 !important; }
+
+#panel-wrapper .toc-border-cover { display: none !important; height: 0 !important; margin: 0 !important; }
