@@ -130,11 +130,9 @@ comments:
     category: General
     # Replace <CATEGORY_ID> with the ID of the discussion category (obtain from Giscus config after enabling Discussions)
     category_id: DIC_kwDOSZlhZ84C-WCf  # Updated with valid Giscus category ID
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    mapping: pathname
+    input_position: bottom
+    lang: id
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
