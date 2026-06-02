@@ -104,10 +104,8 @@ body.warm-mode a{color:#8B5E3C!important;}
 body.warm-mode .card, body.warm-mode .card-body, body.warm-mode .card-text, body.warm-mode .post-preview, body.warm-mode .post-preview *, body.warm-mode h1, body.warm-mode h2, body.warm-mode h3, body.warm-mode h4, body.warm-mode h5, body.warm-mode p, body.warm-mode span, body.warm-mode li, body.warm-mode .categories, body.warm-mode .tag-list { background-color: #FBF0D9 !important; color: #5F4B32 !important; border-color: #E0CFA8 !important; }
 body.warm-mode .card img, body.warm-mode img { filter: none !important; }
 body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E4C4 !important; color: #5F4B32 !important; }
-#toc-wrapper.invisible { visibility: hidden !important; height: 0 !important; margin: 0 !important; overflow: hidden !important; }
-#toc-wrapper.invisible::before { display: none !important; }
-.toc-border-cover { display: none !important; }
 
-#toc-wrapper.invisible {
-  display: none !important;
-}
+
+
+#toc-wrapper::before { display: none !important; }
+#toc-wrapper::after { display: none !important; }
