@@ -106,10 +106,9 @@ body.warm-mode .card img, body.warm-mode img { filter: none !important; }
 body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E4C4 !important; color: #5F4B32 !important; }
 
 
-
 #toc-wrapper::before { display: none !important; }
 #toc-wrapper::after { display: none !important; }
 
-#toc-wrapper { margin-top: 0 !important; }
 
 #panel-wrapper .toc-border-cover { display: none !important; height: 0 !important; margin: 0 !important; }
+#toc-wrapper { margin-top: 2rem !important; }
