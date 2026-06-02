@@ -86,9 +86,13 @@
 }
 
 
-/* Hide Cusdis branding */
-#cusdis_thread a[href*="cusdis.com"] {
-  display: none !important;
+/* Warm theme overrides */
+[data-mode='warm'] {
+  --body-bg: #FBF0D9;
+  --text-color: #5F4B32;
+  --sidebar-bg: #F2E4C4;
+  --link-color: #8B5E3C;
+  --border-color: #E0CFA8;
 }
 
 
