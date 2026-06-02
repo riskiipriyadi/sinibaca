@@ -90,8 +90,10 @@
   font-weight: 500;
 }
 
-/* Comment container min height */
-.comment-container {
-  min-height: 100px;
+
+/* Hide Cusdis branding */
+#cusdis_thread a[href*="cusdis.com"] {
+  display: none !important;
 }
+
 
