@@ -109,3 +109,5 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 
 #toc-wrapper::before { display: none !important; }
 #toc-wrapper::after { display: none !important; }
+
+#toc-wrapper { margin-top: 0 !important; }
