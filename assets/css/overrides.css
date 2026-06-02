@@ -112,3 +112,5 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 
 #panel-wrapper .toc-border-cover { display: none !important; height: 0 !important; margin: 0 !important; }
 #toc-wrapper { margin-top: 2rem !important; }
+
+body.warm-mode search, body.warm-mode #search-input { background-color: #F2E4C4 !important; border-color: #E0CFA8 !important; color: #5F4B32 !important; }
