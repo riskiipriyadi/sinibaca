@@ -114,3 +114,5 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 #toc-wrapper { margin-top: 2rem !important; }
 
 body.warm-mode search, body.warm-mode #search-input { background-color: #F2E4C4 !important; border-color: #E0CFA8 !important; color: #5F4B32 !important; }
+
+#warm-toggle { width: 1.75rem !important; height: 1.75rem !important; display: flex !important; align-items: center !important; justify-content: center !important; }
