@@ -1,0 +1,25 @@
+{% assign date = include.date %}
+{% assign lang = include.lang | default: 'id' %}
+{% assign tooltip = include.tooltip | default: false %}
+{% assign format = include.format | default: 'post' %}
+
+{% case format %}
+  {% when 'post' %}
+    {% assign date_format = site.data.locales[lang].df.post.strftime %}
+  {% when 'archives' %}
+    {% assign date_format = site.data.locales[lang].df.archives.strftime %}
+  {% else %}
+    {% assign date_format = '%Y-%m-%d' %}
+{% endcase %}
+
+{% assign formatted_date = date | date: date_format %}
+
+{% if tooltip %}
+  <time datetime="{{ date | date_to_xmlschema }}" class="post-meta" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ formatted_date }}">
+    {{ formatted_date }}
+  </time>
+{% else %}
+  <time datetime="{{ date | date_to_xmlschema }}" class="post-meta">
+    {{ formatted_date }}
+  </time>
+{% endif %}
