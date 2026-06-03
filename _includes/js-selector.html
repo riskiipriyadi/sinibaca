@@ -1,0 +1,33 @@
+{% comment %}
+Initialize JavaScript components with locale data
+{% endcomment %}
+<script>
+  // Make locale data available to JavaScript
+  window.locale = {{ site.data.locales[lang] | jsonify }};
+  
+  // Initialize search component if it exists
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set search hint if search input exists
+    var searchInput = document.querySelector('#search-input');
+    if (searchInput && window.locale.search && window.locale.search.hint) {
+      searchInput.placeholder = window.locale.search.hint;
+    }
+    
+    // Set search hint if search field exists (alternative selector)
+    var searchField = document.querySelector('.search-field');
+    if (searchField && window.locale.search && window.locale.search.hint) {
+      searchField.placeholder = window.locale.search.hint;
+    }
+    
+    // Set cancel button text if it exists (mobile search overlay)
+    var cancelButton = document.querySelector('.search-cancel-button');
+    if (cancelButton && window.locale.search && window.locale.search.cancel) {
+      cancelButton.textContent = window.locale.search.cancel;
+    }
+    
+    var cancelBtn = document.querySelector('.cancel-search');
+    if (cancelBtn && window.locale.search && window.locale.search.cancel) {
+      cancelBtn.textContent = window.locale.search.cancel;
+    }
+  });
+</script>

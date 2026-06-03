@@ -17,10 +17,10 @@ tabs:
   about: Tentang
 
 # the text displayed in the search bar & search results
-  search:
-    hint: Cari
-    cancel: Batal
-    no_results: Oops! No results found.
+search:
+  hint: Cari
+  cancel: Cancel
+  no_results: Oops! No results found.
 
 panel:
   lastmod: Baru Diperbarui
