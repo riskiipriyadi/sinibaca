@@ -5,7 +5,7 @@
 
 {% case format %}
   {% when 'post' %}
-    {% assign date_format = site.data.locales[lang].df.post.strftime %}
+    {% assign date_format = site.data.locales[lang].df.post.strftime | replace: 'Tuesday', 'Selasa' | replace: 'Wednesday', 'Rabu' | replace: 'Thursday', 'Kamis' | replace: 'Friday', 'Jumat' | replace: 'Saturday', 'Sabtu' | replace: 'Sunday', 'Minggu' | replace: 'Monday', 'Senin' | replace: 'January', 'Januari' | replace: 'February', 'Februari' | replace: 'March', 'Maret' | replace: 'April', 'April' | replace: 'May', 'Mei' | replace: 'June', 'Juni' | replace: 'July', 'Juli' | replace: 'August', 'Agustus' | replace: 'September', 'September' | replace: 'October', 'Oktober' | replace: 'November', 'November' | replace: 'December', 'Desember' %}
   {% when 'archives' %}
     {% assign date_format = site.data.locales[lang].df.archives.strftime %}
   {% else %}
