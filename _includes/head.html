@@ -74,7 +74,7 @@
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}
       {% for link in hint.links %}
-        <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
+        <link rel="{{ link.rel }}" href="{{ link.href }}" {{ link.opts | join: ' ' }}>
       {% endfor %}
     {% endfor %}
   {% endunless %}
