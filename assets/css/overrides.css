@@ -121,3 +121,5 @@ body.warm-mode search, body.warm-mode #search-input { background-color: #F2E4C4 
 #warm-toggle { width: 1.75rem !important; height: 1.75rem !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background-color: var(--sidebar-btn-bg) !important; box-shadow: var(--sidebar-border-color) 0 0 0 1px !important; margin-bottom: 0.5rem !important; padding: 0 !important; opacity: 0.75; }
 #warm-toggle:hover { opacity: 1; background-color: var(--sidebar-hover-bg) !important; }
 #warm-toggle i { font-size: 95% !important; opacity: 0.8; }
+body.warm-mode .post-tag, body.warm-mode .btn-outline-primary { color: #A0522D !important; border-color: #C4956A !important; background-color: transparent !important; }
+body.warm-mode .post-tag:hover, body.warm-mode .btn-outline-primary:hover { background-color: #E8D5B7 !important; color: #6B3A2A !important; border-color: #A0522D !important; }
