@@ -115,4 +115,5 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 
 body.warm-mode search, body.warm-mode #search-input { background-color: #F2E4C4 !important; border-color: #E0CFA8 !important; color: #5F4B32 !important; }
 
-#warm-toggle { width: 1.75rem !important; height: 1.75rem !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+#warm-toggle { width: 1.75rem !important; height: 1.75rem !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background-color: var(--sidebar-btn-bg) !important; box-shadow: var(--sidebar-border-color) 0 0 0 1px !important; }
+#warm-toggle i { line-height: 1.75rem !important; font-size: 95% !important; opacity: 0.8 !important; }
