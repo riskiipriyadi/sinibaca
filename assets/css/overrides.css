@@ -97,8 +97,8 @@ body.warm-mode,body.warm-mode #main,body.warm-mode #core-wrapper,body.warm-mode 
 body.warm-mode #sidebar,body.warm-mode #sidebar *{background-color:#F2E4C4!important;color:#5F4B32!important;}
 body.warm-mode #topbar,body.warm-mode #topbar-wrapper,body.warm-mode footer,body.warm-mode .card{background-color:#FBF0D9!important;border-color:#E0CFA8!important;}
 body.warm-mode a{color:#8B5E3C!important;}
-#warm-toggle{cursor:pointer;background:none;border:none;color:inherit;font-size:16px;padding:4px 8px;opacity:0.75;}
-#warm-toggle:hover{opacity:1;}
+
+
 
 /* Warm mode post card fixes */
 body.warm-mode .card, body.warm-mode .card-body, body.warm-mode .card-text, body.warm-mode .post-preview, body.warm-mode .post-preview *, body.warm-mode h1, body.warm-mode h2, body.warm-mode h3, body.warm-mode h4, body.warm-mode h5, body.warm-mode p, body.warm-mode span, body.warm-mode li, body.warm-mode .categories, body.warm-mode .tag-list { background-color: #FBF0D9 !important; color: #5F4B32 !important; border-color: #E0CFA8 !important; }
@@ -115,5 +115,9 @@ body.warm-mode input, body.warm-mode input::placeholder { background-color: #F2E
 
 body.warm-mode search, body.warm-mode #search-input { background-color: #F2E4C4 !important; border-color: #E0CFA8 !important; color: #5F4B32 !important; }
 
-#warm-toggle { width: 1.75rem !important; height: 1.75rem !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background-color: var(--sidebar-btn-bg) !important; box-shadow: var(--sidebar-border-color) 0 0 0 1px !important; }
-#warm-toggle i { line-height: 1.75rem !important; font-size: 95% !important; opacity: 0.8 !important; }
+
+
+
+#warm-toggle { width: 1.75rem !important; height: 1.75rem !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background-color: var(--sidebar-btn-bg) !important; box-shadow: var(--sidebar-border-color) 0 0 0 1px !important; margin-bottom: 0.5rem !important; padding: 0 !important; opacity: 0.75; }
+#warm-toggle:hover { opacity: 1; background-color: var(--sidebar-hover-bg) !important; }
+#warm-toggle i { font-size: 95% !important; opacity: 0.8; }
