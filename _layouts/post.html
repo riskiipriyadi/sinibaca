@@ -49,7 +49,7 @@ script_includes:
     <!-- author / year / read time -->
     <div class="post-meta text-muted">
       <span>{{ site.data.locales[lang].post.written_by }} {% if page.author %}{{ page.author }}{% else %}<a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>{% endif %}</span>
-      <span>{% include datetime.html date=page.date lang=lang format='post' %}</span>
+      <span>{{ page.date | date: "%Y" }}</span>
       <span>{% include read-time.html content=content prompt=true lang=lang %}</span>
     </div>
   </header>

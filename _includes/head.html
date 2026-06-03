@@ -74,7 +74,7 @@
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}
       {% for link in hint.links %}
-        <link rel="{{ link.rel }}" href="{{ link.href }}" {{ link.opts | join: ' ' }}>
+        <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
       {% endfor %}
     {% endfor %}
   {% endunless %}
@@ -85,9 +85,7 @@
   {% endunless %}
 
   <!-- Theme style -->
-  <!-- Add search icon to topbar -->
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
-  
 
   <!-- Local overrides -->
   <link rel="stylesheet" href="{{ '/assets/css/overrides.css' | relative_url }}">
