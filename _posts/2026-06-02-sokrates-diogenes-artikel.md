@@ -11,7 +11,7 @@ tags: [sokrates, diogenes, stoisisme]
 
 Tahun 399 SM. Sokrates berdiri di hadapan 500 juri Athena. Jaksa meminta hukuman mati. Tawaran tak terucap tapi jelas tersedia: minta maaf, bersikap rendah hati, dan kemungkinan besar dia akan dibebaskan. Sokrates menolak. Bukan karena tidak tahu risikonya, tapi karena dia sudah lama berhenti peduli pada hal-hal yang biasanya membuat orang takut.
 
-Lebih dari dua abad kemudian, Alexander Agung penguasa separuh dunia yang dikenal berdiri di depan seorang pria tua yang sedang berjemur di jalanan Korinthos. Alexander menawarkan apa pun yang dia inginkan. Pria itu menjawab: "Menyingkirlah dari depan matahariKu."
+Lebih dari dua abad kemudian, Alexander Agung penguasa separuh dunia berdiri di depan seorang pria tua yang sedang berjemur di jalanan Korinthos. Alexander menawarkan apa pun yang dia inginkan. Pria itu menjawab: "Menyingkirlah dari depan matahariKu."
 
 Dua orang. Dua cara hidup yang berbeda radikal. Namun satu prinsip yang sama: hidup mereka tidak bisa dibeli, diancam, atau diarahkan oleh ekspektasi orang lain, karena mereka sudah memutuskan lebih dulu apa yang benar-benar bernilai.
 
@@ -154,3 +154,4 @@ Pertanyaan yang tersisa tidak membutuhkan jawaban sekarang. Tapi layak ditanyaka
  Piering, Julie. "Cynics." *Internet Encyclopedia of Philosophy*. https://iep.utm.edu/cynics/
 
  Jenkins, Martin. "Diogenes the Cynic (c.404–323 BC)." *Philosophy Now*, Issue 149. 2022. https://philosophynow.org/issues/149/Diogenes_the_Cynic_c404-323_BC
+
