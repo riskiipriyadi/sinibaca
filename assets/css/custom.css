@@ -1,6 +1,5 @@
 /* ============================================
-   SINIBACA - MINIMAL CLEAN OVERRIDES
-   No HTML changes, pure CSS
+   SINIBACA - PRECISE FIX (DevTools Structure)
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -30,7 +29,7 @@ input {
 }
 
 /* ============================================
-   TOPBAR
+   TOPBAR: #topbar-wrapper
    ============================================ */
 #topbar-wrapper {
   background: rgba(255, 255, 255, 0.9) !important;
@@ -55,6 +54,127 @@ html[data-mode='dark'] #topbar-wrapper {
 #topbar-wrapper input[type='search']:focus {
   border-color: #6366f1 !important;
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* ============================================
+   CARD: .card-wrapper (article)
+   ============================================ */
+
+/* Wrapper utama — hanya styling visual, jangan ubah layout */
+article.card-wrapper {
+  border-radius: 16px !important;
+  border: 1px solid #f1f5f9 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  overflow: hidden !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease !important;
+}
+
+article.card-wrapper:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+html[data-mode='dark'] article.card-wrapper {
+  border-color: #222222 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+html[data-mode='dark'] article.card-wrapper:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Thumbnail container */
+article.card-wrapper .preview-img {
+  overflow: hidden !important;
+  border-radius: 16px 0 0 16px !important;
+}
+
+/* Thumbnail image */
+article.card-wrapper .preview-img img {
+  transition: transform 0.5s ease !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+article.card-wrapper:hover .preview-img img {
+  transform: scale(1.03) !important;
+}
+
+/* Mobile: thumbnail di atas, radius atas */
+@media (max-width: 767px) {
+  article.card-wrapper .preview-img {
+    border-radius: 16px 16px 0 0 !important;
+  }
+}
+
+/* ============================================
+   JUDUL: .card-title (h1)
+   HAPUS ellipsis, biarkan wrap natural
+   ============================================ */
+
+article.card-wrapper .card-title,
+article.card-wrapper h1.card-title {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.4 !important;
+  color: #0f172a !important;
+
+  /* HAPUS pemotongan */
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  display: block !important;
+}
+
+html[data-mode='dark'] article.card-wrapper .card-title {
+  color: #f8fafc !important;
+}
+
+/* ============================================
+   EXCERPT: .card-text
+   ============================================ */
+
+article.card-wrapper .card-text,
+article.card-wrapper .card-text p {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: #475569 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+html[data-mode='dark'] article.card-wrapper .card-text,
+html[data-mode='dark'] article.card-wrapper .card-text p {
+  color: #94a3b8 !important;
+}
+
+/* ============================================
+   META: .post-meta
+   ============================================ */
+
+article.card-wrapper .post-meta {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: #94a3b8 !important;
+  border-top: 1px solid #f1f5f9 !important;
+  padding-top: 0.75rem !important;
+  margin-top: 0.5rem !important;
+}
+
+article.card-wrapper .post-meta i,
+article.card-wrapper .post-meta .fa {
+  color: #94a3b8 !important;
+}
+
+html[data-mode='dark'] article.card-wrapper .post-meta {
+  border-top-color: #222222 !important;
+  color: #64748b !important;
 }
 
 /* ============================================
@@ -172,99 +292,26 @@ html[data-mode='dark'] #panel-wrapper .panel-heading {
   border-bottom-color: #222222 !important;
 }
 
-html[data-mode='dark'] #panel-wrapper li a {
-  color: #94a3b8 !important;
-}
-
 html[data-mode='dark'] #panel-wrapper .post-tag {
   background: #1e293b !important;
   border-color: #334155 !important;
   color: #94a3b8 !important;
 }
 
-html[data-mode='dark'] #panel-wrapper .post-tag:hover {
-  background: #f8fafc !important;
-  color: #0f172a !important;
-}
-
 /* ============================================
-   CARD: Typography Only — NO border/shadow
+   FOOTER
    ============================================ */
-.card-title,
-.post-title,
-.entry-title {
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.02em !important;
-  line-height: 1.4 !important;
-  color: #0f172a !important;
-}
-
-html[data-mode='dark'] .card-title {
-  color: #f8fafc !important;
-}
-
-.card-text,
-.post-content p,
-.entry-summary,
-.excerpt {
-  font-size: 0.95rem !important;
-  line-height: 1.7 !important;
-  color: #475569 !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3 !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
-}
-
-html[data-mode='dark'] .card-text {
-  color: #94a3b8 !important;
-}
-
-.post-meta {
-  font-size: 0.8rem !important;
-  font-weight: 500 !important;
-  color: #94a3b8 !important;
-  border-top: 1px solid #f1f5f9 !important;
-  padding-top: 0.75rem !important;
-  margin-top: 0.75rem !important;
-}
-
-html[data-mode='dark'] .post-meta {
-  border-top-color: #222222 !important;
-  color: #64748b !important;
-}
-
-/* Thumbnail hover */
-.preview-img img,
-.post-img img {
-  transition: transform 0.5s ease !important;
-}
-
-.card-wrapper:hover .preview-img img,
-article:hover .post-img img {
-  transform: scale(1.03) !important;
-}
-
-/* ============================================
-   FOOTER: Full Width dengan Negative Margin
-   ============================================ */
-
 .site-footer {
   position: relative !important;
   background: #f8fafc !important;
   border-top: 1px solid #f1f5f9 !important;
   padding: 2rem !important;
   text-align: center !important;
-
-  /* Trick: keluar dari container bootstrap */
-  width: auto !important;
   margin-left: calc(-50vw + 50%) !important;
   margin-right: calc(-50vw + 50%) !important;
 }
 
-.site-footer p,
-.site-footer span {
+.site-footer p {
   font-size: 0.85rem !important;
   font-weight: 500 !important;
   color: #64748b !important;
@@ -278,7 +325,6 @@ html[data-mode='dark'] .site-footer {
 /* ============================================
    DARK MODE GLOBAL
    ============================================ */
-
 html[data-mode='dark'] body {
   color: #94a3b8 !important;
 }
