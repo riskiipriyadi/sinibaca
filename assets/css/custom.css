@@ -299,27 +299,55 @@ html[data-mode='dark'] #panel-wrapper .post-tag {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER: Full Width dengan Pseudo-Element
+   Background visual full width, content tetap center
    ============================================ */
+
 .site-footer {
   position: relative !important;
-  background: #f8fafc !important;
-  border-top: 1px solid #f1f5f9 !important;
+  background: transparent !important;
   padding: 2rem !important;
   text-align: center !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
+  margin-top: 2rem !important;
+  overflow: visible !important;
 }
 
-.site-footer p {
+/* Pseudo-element untuk background full width */
+.site-footer::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100vw !important;
+  height: 100% !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #f1f5f9 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* Content di atas background */
+.site-footer p,
+.site-footer span {
+  position: relative !important;
+  z-index: 1 !important;
   font-size: 0.85rem !important;
   font-weight: 500 !important;
   color: #64748b !important;
+  margin: 0 !important;
 }
 
-html[data-mode='dark'] .site-footer {
+/* Dark mode */
+html[data-mode='dark'] .site-footer::before {
   background: #0a0a0a !important;
   border-top-color: #222222 !important;
+}
+
+/* Cegah horizontal scroll */
+html,
+body {
+  overflow-x: hidden !important;
 }
 
 /* ============================================
