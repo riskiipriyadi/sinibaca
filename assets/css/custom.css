@@ -545,3 +545,117 @@ html[data-mode='dark'] {
 #sidebar ul.nav li.nav-item:nth-child(5) {
   animation-delay: 0.25s;
 }
+
+/* ============================================
+   SINIBACA - SIDEBAR CENTERING & BOLD TEXT
+   ============================================ */
+
+/* --- Centering Container --- */
+#sidebar {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* --- Profile Wrapper Center --- */
+#sidebar .profile-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* --- Avatar Center --- */
+#sidebar .profile-wrapper .avatar {
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* --- Site Title: Bold Black (Formspree Style) --- */
+#sidebar .site-title {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+  letter-spacing: -0.03em !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.2 !important;
+}
+
+/* Dark mode title */
+html[data-mode='dark'] #sidebar .site-title {
+  color: #f8fafc !important;
+}
+
+/* --- Site Subtitle Center --- */
+#sidebar .site-subtitle {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-size: 0.875rem !important;
+  color: #64748b !important;
+  max-width: 220px !important;
+}
+
+/* Dark mode subtitle */
+html[data-mode='dark'] #sidebar .site-subtitle {
+  color: #94a3b8 !important;
+}
+
+/* --- Navigation Menu Center --- */
+#sidebar ul.nav {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 1rem !important;
+}
+
+#sidebar ul.nav li.nav-item {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#sidebar ul.nav li.nav-item a.nav-link {
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 180px !important;
+  text-align: center !important;
+}
+
+/* Active indicator tetap kiri tapi center secara keseluruhan */
+#sidebar ul.nav li.nav-item a.nav-link.active::before {
+  left: 0.5rem !important;
+}
+
+/* --- Sidebar Bottom (Mode Toggle) Center --- */
+#sidebar .sidebar-bottom {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-bottom: 2rem !important;
+}
+
+#sidebar .sidebar-bottom .mode-toggle {
+  margin: 0 auto !important;
+}
+
+/* --- Mobile Centering --- */
+@media (max-width: 849px) {
+  #sidebar .site-title {
+    font-size: 1.75rem !important;
+  }
+
+  #sidebar ul.nav li.nav-item a.nav-link {
+    min-width: 160px !important;
+  }
+}
