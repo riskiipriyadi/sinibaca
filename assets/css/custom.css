@@ -299,32 +299,27 @@ html[data-mode='dark'] #panel-wrapper .post-tag {
 }
 
 /* ============================================
-   FOOTER: Full Width dengan Pseudo-Element
-   Background visual full width, content tetap center
+   FOOTER: Full Width dengan left/right calc
    ============================================ */
 
 .site-footer {
   position: relative !important;
-  background: transparent !important;
   padding: 2rem !important;
   text-align: center !important;
   margin-top: 2rem !important;
-  overflow: visible !important;
 }
 
-/* Pseudo-element untuk background full width */
+/* Background full width menggunakan left/right calc */
 .site-footer::before {
   content: '' !important;
   position: absolute !important;
   top: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100vw !important;
-  height: 100% !important;
+  bottom: 0 !important;
+  left: calc(-50vw + 50%) !important;
+  right: calc(-50vw + 50%) !important;
   background: #f8fafc !important;
   border-top: 1px solid #f1f5f9 !important;
   z-index: -1 !important;
-  pointer-events: none !important;
 }
 
 /* Content di atas background */
@@ -342,12 +337,6 @@ html[data-mode='dark'] #panel-wrapper .post-tag {
 html[data-mode='dark'] .site-footer::before {
   background: #0a0a0a !important;
   border-top-color: #222222 !important;
-}
-
-/* Cegah horizontal scroll */
-html,
-body {
-  overflow-x: hidden !important;
 }
 
 /* ============================================
