@@ -1,38 +1,50 @@
 /* ============================================
-   SINIBACA - PRECISE OVERRIDES
-   Based on actual Chirpy HTML structure
+   SINIBACA - MINIMAL CLEAN OVERRIDES
+   No HTML changes, pure CSS
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-:root {
-  --font-sans:
-    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    sans-serif;
+/* --- Font Base --- */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li,
+div,
+input {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif !important;
 }
 
 /* ============================================
-   TOPBAR: #topbar-wrapper (dari DevTools)
+   TOPBAR
    ============================================ */
 #topbar-wrapper {
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(12px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
   border-bottom: 1px solid #f1f5f9 !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1020 !important;
 }
 
 html[data-mode='dark'] #topbar-wrapper {
-  background: rgba(10, 10, 10, 0.85) !important;
+  background: rgba(10, 10, 10, 0.9) !important;
   border-bottom: 1px solid #222222 !important;
 }
 
-/* Search input */
-#topbar-wrapper input[type='search'],
-#topbar-wrapper .search-input {
-  font-family: var(--font-sans) !important;
+#topbar-wrapper input[type='search'] {
   border-radius: 9999px !important;
   border: 1px solid #e2e8f0 !important;
   background: #f8fafc !important;
@@ -40,93 +52,13 @@ html[data-mode='dark'] #topbar-wrapper {
   font-size: 0.9rem !important;
 }
 
-/* ============================================
-   CARD: .card-wrapper (dari DevTools)
-   Hanya radius, jangan tambah border/shadow
-   ============================================ */
-.card-wrapper {
-  border-radius: 16px !important;
-  overflow: hidden !important;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease !important;
-}
-
-.card-wrapper:hover {
-  transform: translateY(-2px) !important;
-}
-
-/* Thumbnail zoom */
-.preview-img img,
-.card-wrapper .col-md-5 img {
-  transition: transform 0.5s ease !important;
-}
-
-.card-wrapper:hover .preview-img img,
-.card-wrapper:hover .col-md-5 img {
-  transform: scale(1.03) !important;
+#topbar-wrapper input[type='search']:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
 }
 
 /* ============================================
-   JUDUL: .card-title (dari DevTools)
-   ============================================ */
-.card-title {
-  font-family: var(--font-sans) !important;
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.02em !important;
-  line-height: 1.4 !important;
-  color: #0f172a !important;
-}
-
-html[data-mode='dark'] .card-title {
-  color: #f8fafc !important;
-}
-
-/* ============================================
-   EXCERPT: .card-text (dari DevTools)
-   ============================================ */
-.card-text {
-  font-family: var(--font-sans) !important;
-  font-size: 0.95rem !important;
-  line-height: 1.7 !important;
-  color: #475569 !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3 !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
-}
-
-html[data-mode='dark'] .card-text {
-  color: #94a3b8 !important;
-}
-
-/* ============================================
-   META: .post-meta (dari DevTools)
-   ============================================ */
-.post-meta {
-  font-family: var(--font-sans) !important;
-  font-size: 0.8rem !important;
-  font-weight: 500 !important;
-  color: #94a3b8 !important;
-  border-top: 1px solid #f1f5f9 !important;
-  padding-top: 0.75rem !important;
-  margin-top: 0.5rem !important;
-}
-
-.post-meta i,
-.post-meta .fa {
-  color: #94a3b8 !important;
-  margin-right: 0.25rem !important;
-}
-
-html[data-mode='dark'] .post-meta {
-  border-top-color: #222222 !important;
-  color: #64748b !important;
-}
-
-/* ============================================
-   SIDEBAR KIRI (Pertahankan yang sudah bagus)
+   SIDEBAR KIRI
    ============================================ */
 #sidebar {
   background: #ffffff !important;
@@ -139,7 +71,6 @@ html[data-mode='dark'] #sidebar {
 }
 
 #sidebar .site-title {
-  font-family: var(--font-sans) !important;
   font-size: 1.75rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.03em !important;
@@ -151,14 +82,12 @@ html[data-mode='dark'] #sidebar .site-title {
 }
 
 #sidebar .site-subtitle {
-  font-family: var(--font-sans) !important;
   font-size: 0.85rem !important;
   font-style: italic !important;
   color: #64748b !important;
 }
 
 #sidebar ul.nav li.nav-item a.nav-link {
-  font-family: var(--font-sans) !important;
   font-size: 0.9rem !important;
   font-weight: 500 !important;
   color: #64748b !important;
@@ -181,10 +110,14 @@ html[data-mode='dark'] #sidebar .site-title {
 }
 
 /* ============================================
-   SIDEBAR KANAN: #panel-wrapper
+   SIDEBAR KANAN
    ============================================ */
 #panel-wrapper {
   border-left: 1px solid #f1f5f9 !important;
+}
+
+html[data-mode='dark'] #panel-wrapper {
+  border-left-color: #222222 !important;
 }
 
 #panel-wrapper .panel {
@@ -193,12 +126,10 @@ html[data-mode='dark'] #sidebar .site-title {
   border: 1px solid #f1f5f9 !important;
   padding: 1.5rem !important;
   margin-bottom: 1.5rem !important;
-  font-family: var(--font-sans) !important;
 }
 
 #panel-wrapper .panel-heading,
 #panel-wrapper h4 {
-  font-family: var(--font-sans) !important;
   font-size: 1.1rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
@@ -209,20 +140,13 @@ html[data-mode='dark'] #sidebar .site-title {
 }
 
 #panel-wrapper li a {
-  font-family: var(--font-sans) !important;
   font-size: 0.95rem !important;
   font-weight: 600 !important;
   color: #334155 !important;
   line-height: 1.6 !important;
 }
 
-#panel-wrapper li a:hover {
-  color: #0f172a !important;
-}
-
-#panel-wrapper .post-tag,
-#panel-wrapper a[href*='/tags/'] {
-  font-family: var(--font-sans) !important;
+#panel-wrapper .post-tag {
   font-size: 0.85rem !important;
   font-weight: 600 !important;
   padding: 0.4rem 1rem !important;
@@ -238,17 +162,12 @@ html[data-mode='dark'] #sidebar .site-title {
   border-color: #0f172a !important;
 }
 
-html[data-mode='dark'] #panel-wrapper {
-  border-left-color: #222222 !important;
-}
-
 html[data-mode='dark'] #panel-wrapper .panel {
   background: #111111 !important;
   border-color: #222222 !important;
 }
 
-html[data-mode='dark'] #panel-wrapper .panel-heading,
-html[data-mode='dark'] #panel-wrapper h4 {
+html[data-mode='dark'] #panel-wrapper .panel-heading {
   color: #f8fafc !important;
   border-bottom-color: #222222 !important;
 }
@@ -269,51 +188,96 @@ html[data-mode='dark'] #panel-wrapper .post-tag:hover {
 }
 
 /* ============================================
-   FOOTER
+   CARD: Typography Only — NO border/shadow
    ============================================ */
-footer,
-#footer,
+.card-title,
+.post-title,
+.entry-title {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.4 !important;
+  color: #0f172a !important;
+}
+
+html[data-mode='dark'] .card-title {
+  color: #f8fafc !important;
+}
+
+.card-text,
+.post-content p,
+.entry-summary,
+.excerpt {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: #475569 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+html[data-mode='dark'] .card-text {
+  color: #94a3b8 !important;
+}
+
+.post-meta {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: #94a3b8 !important;
+  border-top: 1px solid #f1f5f9 !important;
+  padding-top: 0.75rem !important;
+  margin-top: 0.75rem !important;
+}
+
+html[data-mode='dark'] .post-meta {
+  border-top-color: #222222 !important;
+  color: #64748b !important;
+}
+
+/* Thumbnail hover */
+.preview-img img,
+.post-img img {
+  transition: transform 0.5s ease !important;
+}
+
+.card-wrapper:hover .preview-img img,
+article:hover .post-img img {
+  transform: scale(1.03) !important;
+}
+
+/* ============================================
+   FOOTER: Full Width dengan Negative Margin
+   ============================================ */
+
 .site-footer {
+  position: relative !important;
   background: #f8fafc !important;
   border-top: 1px solid #f1f5f9 !important;
   padding: 2rem !important;
-  margin-top: 2rem !important;
   text-align: center !important;
+
+  /* Trick: keluar dari container bootstrap */
+  width: auto !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
 }
 
-footer p,
-footer .copyright {
-  font-family: var(--font-sans) !important;
+.site-footer p,
+.site-footer span {
   font-size: 0.85rem !important;
   font-weight: 500 !important;
   color: #64748b !important;
 }
 
-html[data-mode='dark'] footer,
-html[data-mode='dark'] #footer {
+html[data-mode='dark'] .site-footer {
   background: #0a0a0a !important;
   border-top-color: #222222 !important;
 }
 
 /* ============================================
-   GLOBAL
+   DARK MODE GLOBAL
    ============================================ */
-body {
-  font-family: var(--font-sans) !important;
-  color: #334155 !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-sans) !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.02em !important;
-  color: #0f172a !important;
-}
 
 html[data-mode='dark'] body {
   color: #94a3b8 !important;
