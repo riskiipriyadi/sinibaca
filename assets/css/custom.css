@@ -666,61 +666,47 @@ html[data-mode='dark'] #sidebar ul.nav li.nav-item a.nav-link:hover {
 }
 
 /* ============================================
-   PERBAIKAN: CARDS, FOOTER, SIDEBAR KANAN
+   PERBAIKAN MINIMAL: Hanya Styling Kosmetik
+   Tidak mengubah layout struktural Chirpy
    ============================================ */
 
-/* --- BLOG CARDS: Bersih, No Double Border --- */
+/* --- Card: Hanya border, radius, shadow --- */
 #post-list article,
-#post-list .card,
+#post-list .post-preview,
 .post-list article,
-.post-list .card,
-article.post,
-.post-preview,
-#main-wrapper article,
-#core-wrapper article {
-  background: #ffffff !important;
-  border-radius: 16px !important;
+.post-list .post-preview,
+article.post-preview,
+.post-preview {
   border: 1px solid #f1f5f9 !important;
+  border-radius: 16px !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-  overflow: visible !important; /* Hapus overflow hidden yang bikin judul terpotong */
-  margin-bottom: 1.5rem !important;
-  transition: all 0.3s ease !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease !important;
 }
 
 #post-list article:hover,
-#post-list .card:hover,
+#post-list .post-preview:hover,
 .post-list article:hover,
-article.post:hover {
+.post-preview:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
-  border-color: #e2e8f0 !important;
 }
 
-/* Thumbnail: overflow hidden HANYA di wrapper gambar */
-#post-list article .post-img,
-#post-list article .img-link,
-.post-list .post-img,
-article.post .post-img,
-.post-thumbnail {
-  overflow: hidden !important;
-  border-radius: 16px 16px 0 0 !important;
-}
-
+/* Thumbnail hover zoom */
 #post-list article .post-img img,
 .post-list .post-img img,
-article.post .post-img img {
+.post-preview .post-img img {
   transition: transform 0.5s ease !important;
-  width: 100% !important;
-  display: block !important;
 }
 
 #post-list article:hover .post-img img,
-article.post:hover .post-img img {
+.post-list article:hover .post-img img,
+.post-preview:hover .post-img img {
   transform: scale(1.03) !important;
 }
 
-/* --- JUDUL POST: Tidak Terpotong --- */
-#post-list article h1,
+/* --- Judul: Hapus pemotongan, biarkan wrap --- */
 #post-list article h2,
 #post-list article h3,
 #post-list article .post-title,
@@ -728,204 +714,95 @@ article.post:hover .post-img img {
 .post-list h2,
 .post-list h3,
 .post-list .post-title,
-article.post h1,
-article.post h2,
-article.post .post-title,
 .post-preview h2,
 .post-preview .post-title,
-.card-title,
-.card h2 {
-  font-family: 'Inter', system-ui, sans-serif !important;
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.02em !important;
-  line-height: 1.4 !important;
-  color: #0f172a !important;
-  margin-bottom: 0.75rem !important;
-  overflow: visible !important; /* HAPUS overflow hidden */
-  text-overflow: clip !important; /* HAPUS ellipsis */
-  white-space: normal !important; /* Biarkan wrap */
-  display: block !important; /* Bukan -webkit-box */
-  -webkit-line-clamp: unset !important; /* Hapus line clamp */
+.post-preview h3 {
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  display: block !important;
+  -webkit-line-clamp: unset !important;
   -webkit-box-orient: unset !important;
 }
 
-/* --- EXCERPT: Line clamp hanya untuk excerpt, bukan judul --- */
-#post-list article .post-content,
-#post-list article p,
-#post-list article .entry-summary,
+/* --- Excerpt: Line clamp 3 baris --- */
+#post-list article .post-content p,
 #post-list article .excerpt,
-.post-list .post-content,
+#post-list article .entry-summary,
+.post-list .post-content p,
 .post-list .excerpt,
-article.post .post-content,
-article.post .excerpt,
-.post-preview .post-content,
-.card-text,
-.card p {
-  font-family: 'Inter', system-ui, sans-serif !important;
-  font-size: 0.95rem !important;
-  line-height: 1.7 !important;
-  color: #475569 !important;
+.post-preview .post-content p,
+.post-preview .excerpt {
   display: -webkit-box !important;
   -webkit-line-clamp: 3 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
-  margin-bottom: 1rem !important;
 }
 
-/* --- META INFO --- */
+/* --- Meta info styling --- */
 #post-list article .post-meta,
 #post-list article .meta,
 .post-list .post-meta,
-article.post .post-meta,
-.post-preview .post-meta,
-.entry-meta,
-.card-footer {
-  font-family: 'Inter', system-ui, sans-serif !important;
+.post-preview .post-meta {
   font-size: 0.8rem !important;
   font-weight: 500 !important;
   color: #94a3b8 !important;
   border-top: 1px solid #f1f5f9 !important;
-  padding-top: 1rem !important;
-  display: flex !important;
-  gap: 1rem !important;
-  align-items: center !important;
+  padding-top: 0.75rem !important;
+  margin-top: 0.75rem !important;
 }
 
-/* --- FOOTER: Full Width --- */
+/* --- Footer: Minimal, tidak ganggu layout --- */
 footer,
 #footer,
-.site-footer,
-.page-footer,
-#main-wrapper > footer:last-child,
-#core-wrapper + footer,
-body > footer,
-#main > footer {
+.site-footer {
   background: #f8fafc !important;
   border-top: 1px solid #f1f5f9 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  margin-top: 3rem !important;
-  padding: 2rem 0 !important;
-  text-align: center !important;
-  display: block !important;
-  position: relative !important;
-  left: 0 !important;
-  right: 0 !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  margin-top: 2rem !important;
 }
 
 footer p,
-footer span,
-footer .copyright,
 #footer p,
 .site-footer p {
-  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 0.85rem !important;
   font-weight: 500 !important;
   color: #64748b !important;
-  margin: 0 auto !important;
-  max-width: none !important;
+  text-align: center !important;
 }
 
-/* --- SIDEBAR KANAN: Border Left --- */
-#panel-wrapper,
-#sidebar-right,
-.right-sidebar,
-aside.panel,
-#core-wrapper + aside,
-#main-wrapper > aside {
+/* --- Sidebar Kanan: Border left --- */
+#panel-wrapper .panel,
+#panel-wrapper .card {
   border-left: 1px solid #f1f5f9 !important;
 }
 
-html[data-mode='dark'] #panel-wrapper,
-html[data-mode='dark'] #sidebar-right,
-html[data-mode='dark'] .right-sidebar {
-  border-left: 1px solid #222222 !important;
-}
-
-/* --- TOP BAR: Sticky & Clean --- */
-#topbar,
-.topbar,
-.page-header,
-#main-wrapper > header,
-#core-wrapper > header:first-child,
-#search-wrapper,
-.search-wrapper {
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid #f1f5f9 !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 100 !important;
-  padding: 0.75rem 1.5rem !important;
-}
-
-html[data-mode='dark'] #topbar,
-html[data-mode='dark'] .topbar,
-html[data-mode='dark'] .page-header {
-  background: rgba(10, 10, 10, 0.9) !important;
-  border-bottom: 1px solid #222222 !important;
-}
-
-/* Search input */
-#search-wrapper input,
-#search-input,
-.search-input,
-input[type='search'] {
-  font-family: 'Inter', system-ui, sans-serif !important;
-  border-radius: 9999px !important;
-  border: 1px solid #e2e8f0 !important;
-  background: #f8fafc !important;
-  padding: 0.5rem 1rem !important;
-  font-size: 0.9rem !important;
-  outline: none !important;
-}
-
-#search-wrapper input:focus,
-#search-input:focus {
-  border-color: #6366f1 !important;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
-}
-
-/* ============================================
-   DARK MODE CARDS
-   ============================================ */
-
+/* Dark mode */
 html[data-mode='dark'] #post-list article,
-html[data-mode='dark'] #post-list .card,
-html[data-mode='dark'] article.post {
-  background: #111111 !important;
-  border: 1px solid #222222 !important;
+html[data-mode='dark'] .post-preview {
+  border-color: #222222 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 }
 
-html[data-mode='dark'] #post-list article:hover {
-  border-color: #333333 !important;
+html[data-mode='dark'] #post-list article:hover,
+html[data-mode='dark'] .post-preview:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-html[data-mode='dark'] #post-list article h2,
-html[data-mode='dark'] #post-list article .post-title,
-html[data-mode='dark'] article.post h2 {
-  color: #f8fafc !important;
-}
-
-html[data-mode='dark'] #post-list article .post-content,
-html[data-mode='dark'] article.post .post-content {
-  color: #94a3b8 !important;
-}
-
 html[data-mode='dark'] #post-list article .post-meta,
-html[data-mode='dark'] article.post .post-meta {
-  border-top: 1px solid #222222 !important;
-  color: #64748b !important;
+html[data-mode='dark'] .post-preview .post-meta {
+  border-top-color: #222222 !important;
 }
 
 html[data-mode='dark'] footer,
 html[data-mode='dark'] #footer,
 html[data-mode='dark'] .site-footer {
   background: #0a0a0a !important;
-  border-top: 1px solid #222222 !important;
+  border-top-color: #222222 !important;
+}
+
+html[data-mode='dark'] #panel-wrapper .panel,
+html[data-mode='dark'] #panel-wrapper .card {
+  border-left-color: #222222 !important;
 }
