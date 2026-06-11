@@ -1,0 +1,45 @@
+
+# 2026-06-03 19:48:54.924747
++y
+
+# 2026-06-03 19:49:45.778355
++/run Get-Content assets\css\overrides.css | Out-String | Write-Host
+
+# 2026-06-03 19:50:12.002325
++n
+
+# 2026-06-03 19:50:17.000522
++/run type assets\css\overrides.css
+
+# 2026-06-03 19:50:41.173897
++y
+
+# 2026-06-03 19:50:48.921443
++Fix these 3 issues:
++1. Image article white fade/gradient overlay at bottom - remove or fix it
++2. Search icon missing from desktop topbar
++3. Date still in English "Tuesday, 2 June 2026" - change to Indonesian
+
+# 2026-06-03 19:51:15.552507
++y
+
+# 2026-06-03 19:52:17.648205
++/add _includes/head.html _includes/datetime.html
+
+# 2026-06-03 19:52:21.981899
++Fix these 3 issues:
++1. Image article white fade/gradient overlay at bottom - remove or fix it
++2. Search icon missing from desktop topbar
++3. Date still in English "Tuesday, 2 June 2026" - change to Indonesian
+
+# 2026-06-03 19:53:30.412429
++y
+
+# 2026-06-03 19:55:24.895232
++n
+
+# 2026-06-03 19:55:29.830786
++/run git push
+
+# 2026-06-03 19:56:02.385647
++n
