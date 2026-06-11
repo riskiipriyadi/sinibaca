@@ -705,3 +705,68 @@ html[data-mode='dark'] #sidebar .site-subtitle {
 #sidebar .sidebar-bottom {
   display: flex !important;
 }
+
+/* ============================================
+   SINIBACA - SIDEBAR PUTIH POLOS
+   ============================================ */
+
+/* --- Light Mode: Putih Polos --- */
+:root {
+  --sidebar-glass-bg: rgba(255, 255, 255, 0.95);
+  --sidebar-gradient-start: #ffffff;
+  --sidebar-gradient-end: #ffffff;
+  --sidebar-glow: rgba(0, 0, 0, 0.04);
+}
+
+#sidebar {
+  background: #ffffff !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.03),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* --- Dark Mode: Hitam Pekat --- */
+html[data-mode='dark'] {
+  --sidebar-glass-bg: rgba(10, 10, 10, 0.95);
+  --sidebar-gradient-start: #0a0a0a;
+  --sidebar-gradient-end: #0a0a0a;
+  --sidebar-glow: rgba(255, 255, 255, 0.04);
+}
+
+html[data-mode='dark'] #sidebar {
+  background: #0a0a0a !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+}
+
+/* --- Menu Hover (sesuaikan untuk background putih) --- */
+#sidebar ul.nav li.nav-item a.nav-link:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.08),
+    rgba(139, 92, 246, 0.04)
+  ) !important;
+}
+
+/* Active state tetap indigo */
+#sidebar ul.nav li.nav-item a.nav-link.active {
+  background: linear-gradient(135deg, #6366f1, #4f46e5) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px -3px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* --- Bottom icon buttons (sesuaikan untuk putih) --- */
+#sidebar .sidebar-bottom a {
+  background: rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+html[data-mode='dark'] #sidebar .sidebar-bottom a {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
