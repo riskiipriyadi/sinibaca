@@ -2,3 +2,348 @@
 layout: home
 # Index page
 ---
+
+<style>
+  /* ========== HERO SECTION ========== */
+  .hero-home {
+    text-align: center;
+    padding: 1rem 0.5rem 2.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .hero-home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0969da, #54aeff);
+    border-radius: 3px;
+  }
+
+  .hero-home h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    color: inherit;
+  }
+
+  .hero-home p {
+    font-size: 1.05rem;
+    opacity: 0.7;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: inherit;
+  }
+
+  /* ========== POST CARDS ========== */
+  #post-list .card,
+  .post-list .card,
+  .post-preview,
+  article.card {
+    border-radius: 14px !important;
+    border: 1px solid rgba(128, 128, 128, 0.1) !important;
+    background: rgba(128, 128, 128, 0.02) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: hidden !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #post-list .card:hover,
+  .post-list .card:hover,
+  .post-preview:hover,
+  article.card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12) !important;
+    border-color: rgba(9, 105, 218, 0.2) !important;
+    background: rgba(128, 128, 128, 0.04) !important;
+  }
+
+  /* Thumbnail image zoom */
+  .post-img,
+  .card-img-right,
+  .thumbnail,
+  .card .img-link img,
+  .post-image {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 0 12px 12px 0 !important;
+  }
+
+  .card:hover .post-img,
+  .card:hover .card-img-right,
+  .card:hover .thumbnail,
+  .card:hover .img-link img,
+  .card:hover .post-image {
+    transform: scale(1.08) !important;
+  }
+
+  /* Card body */
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  /* Post title */
+  .card-title,
+  .post-title,
+  .card .post-title {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .card-title a,
+  .post-title a,
+  .card h2 a,
+  .card h3 a {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+    background: none !important;
+  }
+
+  .card-title a:hover,
+  .post-title a:hover,
+  .card h2 a:hover,
+  .card h3 a:hover {
+    color: #0969da !important;
+    text-decoration: none !important;
+  }
+
+  /* Excerpt text */
+  .card-text,
+  .post-excerpt,
+  .post-summary,
+  .card .text-muted {
+    font-size: 0.95rem !important;
+    line-height: 1.75 !important;
+    opacity: 0.85;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Meta info & category badges */
+  .post-meta,
+  .card .post-meta,
+  .card-text.text-muted {
+    font-size: 0.85rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .post-meta i,
+  .post-meta .far,
+  .post-meta .fas {
+    opacity: 0.6;
+  }
+
+  .post-meta a,
+  .card-text a[href*="/categories/"],
+  .card-text a[href*="/tags/"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.3rem !important;
+    padding: 0.25rem 0.7rem !important;
+    background: rgba(9, 105, 218, 0.08) !important;
+    border-radius: 6px !important;
+    color: #0969da !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    border: none !important;
+  }
+
+  .post-meta a:hover,
+  .card-text a[href*="/categories/"]:hover,
+  .card-text a[href*="/tags/"]:hover {
+    background: rgba(9, 105, 218, 0.15) !important;
+    transform: translateY(-1px);
+  }
+
+  /* Read more arrow */
+  .read-more,
+  .post-read-more,
+  .card a.read-more,
+  .card .read-more {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    margin-top: 0.5rem !important;
+    color: #0969da !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .read-more::after,
+  .post-read-more::after,
+  .card .read-more::after {
+    content: "→" !important;
+    transition: transform 0.2s ease !important;
+    display: inline-block !important;
+  }
+
+  .read-more:hover::after,
+  .post-read-more:hover::after,
+  .card .read-more:hover::after {
+    transform: translateX(4px) !important;
+  }
+
+  .read-more:hover,
+  .post-read-more:hover,
+  .card .read-more:hover {
+    color: #054da5 !important;
+    text-decoration: none !important;
+  }
+
+  /* ========== PAGINATION ========== */
+  .pagination,
+  nav.pagination {
+    margin-top: 2.5rem !important;
+    gap: 0.5rem !important;
+    justify-content: center !important;
+  }
+
+  .pagination .page-item .page-link,
+  .pagination a,
+  .pagination span {
+    border-radius: 10px !important;
+    border: 1px solid rgba(128, 128, 128, 0.15) !important;
+    color: #555 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease !important;
+    margin: 0 0.15rem !important;
+    text-decoration: none !important;
+  }
+
+  .pagination .page-item.active .page-link,
+  .pagination .active a,
+  .pagination .current {
+    background: linear-gradient(135deg, #0969da, #54aeff) !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+
+  .pagination .page-item .page-link:hover,
+  .pagination a:hover,
+  .pagination span:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    border-color: rgba(9, 105, 218, 0.3) !important;
+    color: #0969da !important;
+    text-decoration: none !important;
+  }
+
+  .pagination .page-item.disabled .page-link,
+  .pagination .disabled a,
+  .pagination .disabled span {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+  }
+
+  /* ========== STAGGER FADE-IN ========== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #post-list .card,
+  .post-list .card,
+  .post-preview,
+  article.card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  #post-list .card:nth-child(1),
+  .post-list .card:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  #post-list .card:nth-child(2),
+  .post-list .card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  #post-list .card:nth-child(3),
+  .post-list .card:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+  #post-list .card:nth-child(4),
+  .post-list .card:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+  #post-list .card:nth-child(5),
+  .post-list .card:nth-child(5) {
+    animation-delay: 0.25s;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    .hero-home h1 {
+      font-size: 1.65rem;
+    }
+
+    .hero-home p {
+      font-size: 0.95rem;
+    }
+
+    .post-img,
+    .card-img-right,
+    .thumbnail,
+    .card .img-link img,
+    .post-image {
+      border-radius: 12px 12px 0 0 !important;
+    }
+
+    .card-body {
+      padding: 1.25rem !important;
+    }
+
+    .card-title,
+    .post-title,
+    .card .post-title {
+      font-size: 1.15rem !important;
+    }
+  }
+
+  /* ========== DARK MODE ========== */
+  [data-mode="dark"] #post-list .card,
+  [data-mode="dark"] .post-list .card,
+  [data-mode="dark"] .post-preview,
+  [data-mode="dark"] article.card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  [data-mode="dark"] #post-list .card:hover,
+  [data-mode="dark"] .post-list .card:hover,
+  [data-mode="dark"] .post-preview:hover,
+  [data-mode="dark"] article.card:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(9, 105, 218, 0.3) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3) !important;
+  }
+</style>
+
+<div class="hero-home">
+  <h1>Selamat Datang di Sinibaca</h1>
+  <p>
+    Ruang refleksi tentang filsafat, cara berpikir, dan hal-hal penting yang
+    jarang dibicarakan.
+  </p>
+</div>
